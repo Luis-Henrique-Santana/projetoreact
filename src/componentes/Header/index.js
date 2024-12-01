@@ -1,4 +1,4 @@
-import './estilo.css'
+
 import Logo from '../Logo'
 import TextoOpicoes from '../TextoOpicoes';
 import Icones from '../IconesHeader';
@@ -14,11 +14,11 @@ const HeaderContainer = styled.header`
 
 function Header(){
     return (
-        <header className="App-header">
+        <HeaderContainer>
             <Logo/>
             <TextoOpicoes/>
             <Icones/>
-        </header>
+        </HeaderContainer>
     )
 }
 export default Header;
