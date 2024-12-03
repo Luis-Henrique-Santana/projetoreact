@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom'
 
 const OpicoesHeader = styled.ul`
     display: flex;
@@ -16,12 +17,14 @@ const OpicaoHeader = styled.li`
 `
 
 const textoOpicoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+const linkOpcoesHeader = []
+
 
 function TextoOpicoes (){
   return(
     <OpicoesHeader>
           {textoOpicoes.map( (texto) => ( 
-            <OpicaoHeader><p>{texto}</p></OpicaoHeader>
+            <Link to={`/${texto.toLowerCase()}`} ><OpicaoHeader><p>{texto}</p></OpicaoHeader></Link>
             )
           )}
     </OpicoesHeader>
